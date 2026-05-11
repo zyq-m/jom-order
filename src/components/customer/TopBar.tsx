@@ -1,4 +1,5 @@
 import { useOrderStore } from "@/stores/orderStore";
+import ThemeToggle from "@/components/theme-toggle";
 
 export default function TopBar() {
 	const tableId = useOrderStore((s) => s.tableId);
@@ -18,6 +19,7 @@ export default function TopBar() {
 				</div>
 			</div>
 			<div className="flex items-center gap-1.5 shrink-0">
+				<ThemeToggle />
 				<span className="text-xs text-muted-foreground">Meja</span>
 				<span className="text-sm font-bold">{tableId}</span>
 			</div>

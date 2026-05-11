@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router"
+import ThemeToggle from "@/components/theme-toggle"
 import { LayoutDashboard, UtensilsCrossed, ListOrdered, QrCode } from "lucide-react"
 
 const nav = [
@@ -17,9 +18,12 @@ export default function AdminLayout() {
           <LayoutDashboard className="h-4 w-4 text-primary" />
           <h1 className="font-bold text-sm">Admin</h1>
         </div>
-        <NavLink to="/" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
-          Laman Utama
-        </NavLink>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <NavLink to="/" className="text-xs text-muted-foreground hover:text-foreground transition-colors">
+              Laman Utama
+            </NavLink>
+          </div>
       </header>
 
       <div className="flex flex-1">

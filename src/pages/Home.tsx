@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import ThemeToggle from "@/components/theme-toggle"
 import { Link } from "react-router"
 import {
   QrCode,
@@ -131,6 +132,7 @@ export default function Home() {
             </a>
           </nav>
           <div className="flex items-center gap-2">
+            <ThemeToggle />
             <Button size="sm" className="rounded-full">Hubungi Kami</Button>
           </div>
         </div>

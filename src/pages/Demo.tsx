@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import ThemeToggle from "@/components/theme-toggle"
 import { UtensilsCrossed, Smartphone, ChefHat, Settings, ExternalLink } from "lucide-react"
 import { Link } from "react-router"
 
@@ -42,7 +43,10 @@ export default function Demo() {
       <header className="border-b bg-background/80 backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between px-4 h-14">
           <span className="text-lg font-bold tracking-tight">JomOrder</span>
-          <span className="text-xs text-muted-foreground">Demo</span>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+            <span className="text-xs text-muted-foreground">Demo</span>
+          </div>
         </div>
       </header>
 

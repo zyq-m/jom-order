@@ -1,5 +1,6 @@
 import { useKitchenStore } from "@/stores/kitchenStore"
 import { Button } from "@/components/ui/button"
+import ThemeToggle from "@/components/theme-toggle"
 import { Bell, CookingPot, CheckCircle2, Clock, ChevronDown } from "lucide-react"
 import { useState } from "react"
 
@@ -35,8 +36,9 @@ export default function KitchenDashboard() {
           <CookingPot className="h-5 w-5 text-primary" />
           <h1 className="font-bold text-sm">Dapur</h1>
         </div>
-        <div className="flex items-center gap-3 text-sm text-muted-foreground">
-          <span className="hidden sm:inline">
+        <div className="flex items-center gap-1 text-sm text-muted-foreground">
+          <ThemeToggle />
+          <span className="hidden sm:inline ml-2">
             {orders.filter((o) => o.status !== "done").length} aktif
           </span>
           <span className="hidden sm:inline">
